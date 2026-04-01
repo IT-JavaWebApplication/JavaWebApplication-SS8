@@ -1,0 +1,22 @@
+<div class="form-group" xmlns:th="http://www.w3.org/1999/xhtml" xmlns:th="http://www.w3.org/1999/xhtml"
+     xmlns:th="http://www.w3.org/1999/xhtml" xmlns:th="http://www.w3.org/1999/xhtml"
+     xmlns:th="http://www.w3.org/1999/xhtml" xmlns:th="http://www.w3.org/1999/xhtml">
+  <label>Tuổi:</label>
+  <input type="number" th:field="*{age}" class="form-control" />
+
+  <p th:if="${#fields.hasErrors('age')}"
+     th:errors="*{age}"
+     style="color: red;">
+    Dòng này sẽ hiển thị thông báo lỗi (ví dụ: Tuổi phải từ 18-60)
+  </p>
+</div>
+
+<div class="form-group">
+  <label>Email:</label>
+  <input type="email" th:field="*{email}" class="form-control" />
+  <p th:if="${#fields.hasErrors('email')}"
+     th:errors="*{email}"
+     style="color: red;">
+    Lỗi định dạng email
+  </p>
+</div>
